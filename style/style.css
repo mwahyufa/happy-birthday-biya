@@ -134,9 +134,10 @@ body {
 
 .six .hat {
   position: absolute;
-  width: 20%;
-  top: -45%;
-  left: 34% !important;
+  width: 20% !important;
+  top: -45% !important;
+  left: 50% !important;
+  transform: translateX(-80%) !important;
   /* transform: scale(0.1); */
 }
 
@@ -251,27 +252,15 @@ body {
 
 
 /* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
+@media screen and (max-width: 500px) {
+  .six img {
+    max-width: 75%; /* naikkan dari 45% → coba 70-80% sesuai selera */
   }
-}
 
-@media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
+    width: 35% !important;
+    top: -50% !important;
+    transform: translateX(-80%) !important; /* nilai sama, konsisten */
   }
 }
 
@@ -297,10 +286,7 @@ body {
     font-size: 10rem;
   }
 
-  .six .hat {
-    width: 50px;
-    top: -20px;
-  }
+
 
   .wish-hbd {
     font-size: 2.2em;
