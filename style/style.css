@@ -5,6 +5,10 @@ html {
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+   /* Deep ocean-to-purple gradient background */
+  background: linear-gradient(135deg, #0f0c29, #1a1a4e, #0d2137);
+  color: #f0e6ff;
+  min-height: 100vh;
 }
 
 .container {
@@ -60,7 +64,7 @@ body {
 .four .text-box {
   width: 600px;
   margin: 0 auto;
-  border: 3px solid #aaa;
+  border: 3px solid rgba(167, 139, 250, 0.6);
   border-radius: 5px;
   padding: 10px;
   position: relative;
@@ -80,7 +84,7 @@ body {
   right: 5px;
   bottom: 5px;
   color: #fff;
-  background-color: rgb(21, 161, 237);
+  background-color: #7c3aed;
   padding: 5px 8px;
   border-radius: 3px;
 }
@@ -110,6 +114,9 @@ body {
 
 .idea-6 span {
   font-size: 15rem;
+  /* Ocean teal accent for the big "SO" letters */
+  color: #67e8f9;
+  text-shadow: 0 0 40px rgba(103, 232, 249, 0.4);
 }
 
 .six {
@@ -118,15 +125,18 @@ body {
 
 .six img {
   display: inline-block;
-  max-width: 100%;
+  max-width: 45%;
   height: auto;
+  /* Soft purple glow around the photo */
+  filter: drop-shadow(0 0 18px rgba(139, 92, 246, 0.55));
+  /*border-radius: 50%; */
 }
 
 .six .hat {
   position: absolute;
-  width: 80px;
-  top: -35px;
-  left: 41.5%;
+  width: 150px;
+  top: -210px;
+  left: 240px !important;
   /* transform: scale(0.1); */
 }
 
@@ -159,55 +169,55 @@ body {
 .eight svg:nth-child(1) {
   top: 7vh;
   left: 5vw;
-  fill: #bd6ecf;
+  fill: #7c3aed;
 }
 
 .eight svg:nth-child(2) {
   top: 23vh;
   left: 35vw;
-  fill: #7dd175;
+  fill: #0891b2;
 }
 
 .eight svg:nth-child(3) {
   top: 33vh;
   left: 23vw;
-  fill: #349d8b;
+  fill: #a855f7;
 }
 
 .eight svg:nth-child(4) {
   top: 43vh;
   left: 57vw;
-  fill: #347a9d;
+  fill: #06b6d4;
 }
 
 .eight svg:nth-child(5) {
   top: 68vh;
   left: 7vw;
-  fill: #c66053;
+  fill: #5b21b6;
 }
 
 .eight svg:nth-child(6) {
   top: 42vh;
   left: 77vw;
-  fill: #bfaa40;
+  fill: #0e7490;
 }
 
 .eight svg:nth-child(7) {
   top: 68vh;
   left: 83vw;
-  fill: #e3bae8;
+  fill: #c4b5fd;
 }
 
 .eight svg:nth-child(8) {
   top: 86vh;
   left: 37vw;
-  fill: #8762cb;
+  fill: #4f46e5;
 }
 
 .eight svg:nth-child(9) {
   top: 94vh;
   left: 87vw;
-  fill: #9a90da;
+  fill: #67e8f9;
 }
 
 .wish-hbd {
@@ -220,6 +230,7 @@ body {
   font-weight: lighter;
   font-size: 2rem;
   margin: 10px 0 0;
+  color: #a5f3fc; /* soft ocean cyan */
 }
 
 .nine p {
@@ -230,7 +241,14 @@ body {
 #replay {
   z-index: 3;
   cursor: pointer;
+  color: #a855f7;
+  transition: color 0.3s ease;
 }
+
+#replay:hover {
+  color: #67e8f9;
+}
+
 
 /* Media Queries */
 @media screen and (max-height: 1000px) {
@@ -296,4 +314,94 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+}
+
+/* ─── Intro Overlay ─── */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #0f0c29, #1a1a4e, #0d2137);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+ 
+.intro-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+ 
+.intro-content {
+  text-align: center;
+  animation: floatIn 1.2s ease forwards;
+}
+ 
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* Glowing animated ring behind the button */
+.intro-content::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(167, 139, 250, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseRing 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+ 
+@keyframes pulseRing {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.4; }
+  50%       { transform: translate(-50%, -50%) scale(1.12); opacity: 0.1; }
+}
+ 
+.intro-for {
+  color: #a78bfa;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-family: "Work Sans", sans-serif;
+}
+ 
+.intro-name {
+  color: #e9d5ff;
+  font-size: 4.5rem;
+  margin: 0 0 48px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  text-shadow: 0 0 50px rgba(167, 139, 250, 0.5);
+}
+ 
+.intro-btn {
+  background: transparent;
+  color: #c4b5fd;
+  border: 1.5px solid rgba(167, 139, 250, 0.6);
+  padding: 14px 40px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+ 
+.intro-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+  border-color: rgba(167, 139, 250, 1);
+  color: #fff;
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+  transform: scale(1.04);
 }

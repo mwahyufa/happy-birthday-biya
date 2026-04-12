@@ -115,7 +115,7 @@ const animationTimeline = () => {
       0.05
     )
     .to(".fake-btn", 0.1, {
-      backgroundColor: "rgb(127, 206, 248)"
+      backgroundColor: "rgb(167, 139, 250)"
     })
     .to(
       ".four",
@@ -135,7 +135,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "rgb(124, 58, 237)",
       color: "#fff"
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=1.5")
@@ -209,7 +209,7 @@ const animationTimeline = () => {
       0.2
     )
     .from(
-      ".lydia-dp",
+      ".biya-dp",
       0.5,
       {
         scale: 3.5,
@@ -249,7 +249,7 @@ const animationTimeline = () => {
       {
         scale: 1,
         rotationY: 0,
-        color: "#ff69b4",
+        color: "#c084fc",
         ease: Expo.easeOut
       },
       0.1,
@@ -302,5 +302,16 @@ const animationTimeline = () => {
   });
 };
 
-// Run fetch and animation in sequence
-fetchData();
+// ─── Intro Overlay + Music ───
+const introOverlay = document.getElementById("introOverlay");
+const introBtn     = document.getElementById("introBtn");
+const bgMusic      = document.getElementById("bgMusic");
+ 
+// Only start animation AND music after button click
+introBtn.addEventListener("click", () => {
+  introOverlay.classList.add("hidden");
+  bgMusic.volume = 0.5;
+  bgMusic.currentTime = 2;
+  bgMusic.play();
+  fetchData(); // starts animation only after click
+});
