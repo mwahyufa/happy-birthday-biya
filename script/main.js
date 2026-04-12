@@ -312,6 +312,6 @@ introBtn.addEventListener("click", () => {
   introOverlay.classList.add("hidden");
   bgMusic.volume = 0.5;
   bgMusic.currentTime = 2;
-  /* bgMusic.play(); */
+  bgMusic.play();
   fetchData(); // starts animation only after click
 });
