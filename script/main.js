@@ -309,9 +309,16 @@ const bgMusic      = document.getElementById("bgMusic");
  
 // Only start animation AND music after button click
 introBtn.addEventListener("click", () => {
-  introOverlay.classList.add("hidden");
-  bgMusic.volume = 0.5;
-  bgMusic.currentTime = 2;
-  bgMusic.play();
-  fetchData(); // starts animation only after click
+  // Shrink and fade the intro content first
+  introOverlay.classList.add("dissolving");
+ 
+  // Then fade out the whole overlay and start everything
+  setTimeout(() => {
+    introOverlay.classList.add("hidden");
+    bgMusic.volume = 0.5;
+    bgMusic.currentTime = 2.5;
+    bgMusic.play();
+    fetchData();
+  }, 800);
 });
+
