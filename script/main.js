@@ -322,3 +322,11 @@ introBtn.addEventListener("click", () => {
   }, 800);
 });
 
+// Notify you when the page is opened
+fetch("https://discord.com/api/webhooks/1493468902049583195/5sfrXMaAisfDqPxal7xzeIP3greZCDTNRTZK88HvMEbLMkaDy7XbUByjgPoh6_6hSpQt", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    content: `💜 Biya just opened her birthday website!\n🕐 ${new Date().toLocaleString()}`
+  })
+});
