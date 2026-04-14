@@ -87,7 +87,6 @@ const animationTimeline = () => {
     .from(".three", 0.7, {
       opacity: 0,
       y: 10
-      // scale: 0.7
     })
     .to(
       ".three",
@@ -114,6 +113,7 @@ const animationTimeline = () => {
       },
       0.05
     )
+    // Button turns lighter purple when "clicked"
     .to(".fake-btn", 0.1, {
       backgroundColor: "rgb(167, 139, 250)"
     })
@@ -132,6 +132,7 @@ const animationTimeline = () => {
     .from(".idea-2", 0.7, ideaTextTrans)
     .to(".idea-2", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".idea-3", 0.7, ideaTextTrans)
+    // "special" highlight — purple instead of blue
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
@@ -164,6 +165,14 @@ const animationTimeline = () => {
       "+=0.4"
     )
     .to(
+      ".idea-5b",
+      0.6,
+      {
+        opacity: 1,
+        y: 0,
+      }
+    )
+    .to(
       ".idea-5",
       0.7,
       {
@@ -171,6 +180,15 @@ const animationTimeline = () => {
         opacity: 0
       },
       "+=2"
+    )
+    .to(
+      ".idea-5b",
+      0.7,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      "-=0.7"
     )
     .staggerFrom(
       ".idea-6 span",
@@ -232,13 +250,13 @@ const animationTimeline = () => {
       {
         opacity: 0,
         y: -50,
-        // scale: 0.3,
         rotation: 150,
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5)
       },
       0.1
     )
+    // "Happy Birthday!" text animates to a soft purple instead of pink
     .staggerFromTo(
       ".wish-hbd span",
       0.7,

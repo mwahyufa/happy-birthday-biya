@@ -102,6 +102,16 @@ body {
   display: inline-block;
 }
 
+.idea-5b {
+  font-size: 2.2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8rem; /* sits just below "You are Special" */
+  opacity: 0;
+  color: #c4b5fd;
+}
+
 .five .idea-5 {
   font-size: 4rem;
 }
@@ -114,9 +124,6 @@ body {
 
 .idea-6 span {
   font-size: 15rem;
-  /* Ocean teal accent for the big "SO" letters */
-  color: #67e8f9;
-  text-shadow: 0 0 40px rgba(103, 232, 249, 0.4);
 }
 
 .six {
@@ -231,7 +238,6 @@ body {
   font-weight: lighter;
   font-size: 2rem;
   margin: 10px 0 0;
-  color: #a5f3fc; /* soft ocean cyan */
 }
 
 .nine p {
