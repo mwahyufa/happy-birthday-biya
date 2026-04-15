@@ -13,7 +13,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
@@ -257,22 +257,86 @@ body {
 }
 
 
-/* Media Queries */
-@media screen and (max-width: 500px) {
+/* ─── Responsive ─── */
+
+/* Tablet (≤768px) */
+@media screen and (max-width: 768px) {
+  .one {
+    font-size: 3.2rem;
+  }
+
+  .two {
+    font-size: 1rem;
+  }
+
+  .three {
+    font-size: 2.2rem;
+  }
+
+  .five p {
+    font-size: 1.6rem;
+  }
+
+  .five .idea-5 {
+    font-size: 3rem;
+  }
+
+  .idea-5b {
+    font-size: 1.8rem;
+  }
+
+  .idea-6 span {
+    font-size: 11rem;
+  }
+
+  .wish-hbd {
+    font-size: 2.6em;
+  }
+
+  .wish h5 {
+    font-size: 1.6rem;
+  }
+
+  .nine p {
+    font-size: 1.6rem;
+  }
+
+  .four .text-box {
+    width: 85%;
+  }
+
   .six img {
-    max-width: 75%; /* naikkan dari 45% → coba 70-80% sesuai selera */
+    max-width: 55%;
   }
 
   .six .hat {
-    width: 35% !important;
-    top: -50% !important;
-    transform: translateX(-80%) !important; /* nilai sama, konsisten */
+    width: 26% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translateX(-80%) translateY(-170%) !important;
+  }
+
+  .intro-name {
+    font-size: 3.5rem;
   }
 }
 
+/* Mobile (≤500px) */
 @media screen and (max-width: 500px) {
   .container {
     width: 90%;
+  }
+
+  .one {
+    font-size: 2.4rem;
+  }
+
+  .two {
+    font-size: 0.9rem;
+  }
+
+  .three {
+    font-size: 1.8rem;
   }
 
   .four .text-box {
@@ -284,27 +348,84 @@ body {
     bottom: -38px;
   }
 
+  .five p {
+    font-size: 1.3rem;
+  }
+
+  .five .idea-5 {
+    font-size: 2.2rem;
+  }
+
   .idea-5 span {
     display: block;
   }
 
-  .idea-6 span {
-    font-size: 10rem;
+  .idea-5b {
+    font-size: 1.4rem;
+    top: 6rem;
   }
 
+  .idea-6 span {
+    font-size: 7rem;
+  }
 
+  .six img {
+    max-width: 75%;
+  }
+
+  .six .hat {
+    width: 35% !important;
+    transform: translateX(-80%) translateY(-180%) !important;
+  }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 1.3rem;
+  }
+
+  .intro-name {
+    font-size: 2.8rem;
+    margin-bottom: 36px;
+  }
+
+  .intro-for {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .intro-btn {
+    padding: 12px 30px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens (≤360px) */
+@media screen and (max-width: 360px) {
+  .one {
+    font-size: 2rem;
+  }
+
+  .idea-6 span {
+    font-size: 5.5rem;
+  }
+
+  .wish-hbd {
+    font-size: 1.7em;
+  }
+
+  .intro-name {
+    font-size: 2.2rem;
+  }
+
+  .nine p {
+    font-size: 1.1rem;
   }
 }
 
